@@ -12,28 +12,18 @@
 	}
 }
 .menubtn{
-	$color-main: #fff;
-	$color-active: #fff;
-	@include alt(33px,34px);
+	$color-main: #231815;
+	$color-active: #ccc;
+	@include alt(100px,84px);
 	cursor: pointer;
 	z-index: 999;
 	transition: 0.35s;
-	@include border-radius(0 0 15px 15px);
-	box-sizing:border-box;
-	border-bottom:1px solid #e33024;
-	border-left:1px solid #e33024;
-	border-right:1px solid #e33024;	
 	&:hover{
-		span{background-color: #e33024;}		
+		span{opacity: 0.8;}		
 	}
-	&.on {
-		@include alt(170px,31px);
-		@include border-radius(0);
-		border-bottom:1px solid rgba(255,255,255,0.5);			
-		border-left:0px solid #e33024;
-		border-right:0px solid #e33024;
+	&.on {		
 	  	.top {
-	    	@include transform(translateY(5px) translateX(0) rotate(45deg));
+	    	@include transform(translateY(12px) translateX(0) rotate(45deg));
 	    	background: $color-active;
 	  	}
 	  	.middle {
@@ -41,30 +31,105 @@
 	    	background: $color-active;
 	  	}    
 	  	.bottom {
-	    	@include transform(translateY(-5px) translateX(0) rotate(-45deg));
+	    	@include transform(translateY(-12px) translateX(0) rotate(-45deg));
 	    	background: $color-active;
 	  	}	  	
 	}  
 	span {
 		background: $color-main;
 		border: none;
-		height: 3px;
-		width: 25px;
+		height: 5px;
+		width: 42px;
 		position: absolute;
-		top: 7px;
-		left: 4px;
+		top: 27px;
+		left: 29px;
 		transition:  all .35s ease;
 		cursor: pointer;    
 		z-index: 1;
 	  	&:nth-of-type(2) {
-	    	top: 12px;
+	    	top: 39px;
 	  	}    
 	  	&:nth-of-type(3) {
-	    	top: 18px;
+	    	top: 51px;
 	  	}
+	}
+}
+.menu{
+	@include flt;
+	z-index: 998;
+	display: none;
+	.menu_box{
+		@include alt(100%,440px,0,50%,0,-220px);
+		z-index: 1;
+		.logo{
+			@include r(100%,83px);
+			border-bottom:1px solid #8b8685;
+			background: url(../images/menu_logo.png) no-repeat;
+			background-position: center top;
+		}
+		.menua{
+			@include r(100%,57px);
+			border-bottom:1px solid #8b8685;
+			background-position: center;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			&:hover{
+				opacity: 0.8;
+			}
+			&.m1{background-image: url(../images/menua1.png);}
+			&.m2{background-image: url(../images/menua2.png);}
+			&.m3{background-image: url(../images/menua3.png);}
+			&.m4{background-image: url(../images/menua4.png);}
+			&.m5{background-image: url(../images/menua5.png);}
+			&.m6{background-image: url(../images/menua6.png);}
+		}
+	}
+	.bg{
+		@include alt;
+		background: url(../images/menu_bg.jpg) no-repeat;
+		background-size: cover;
+		background-position: center top;
+		z-index: 0;
+		.icon{
+			@include alb(235px,302px,50%,-167px,-117px);
+			background: url(../images/menu_bg2.png) no-repeat;
+			background-position: center top;
+		}
+	}
+}
+.scroll_btn{
+	@include flb(100px,78px,50%,25px,-50px);
+	background: url(../images/pg1_scroll.png) no-repeat;
+	background-position: center;
+	cursor: pointer;
+	z-index: 997;
+	transition:0.5s;
+	&.on{
+		opacity: 0;
+		cursor: none;
 	}
 }
 .wrapper{
 	@include alt;
 	overflow:hidden;
+
+	.page_box{
+		@include alt;
+		transition:0.5s;
+		.page{
+			@include alt;
+			&.page1{
+				background: url(../images/pg1_bg.jpg) no-repeat;
+				background-size: cover;
+				background-position: center;
+				.title{
+					@include alt(428px,348px,50%,50%,-214px,-214px);
+					background: url(../images/pg1_title.png) no-repeat;
+				}
+			}
+			&.page2{
+
+			}
+		}
+	}
 }

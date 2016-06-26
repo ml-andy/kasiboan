@@ -5,6 +5,10 @@
 	//Init
 
 	//AddListener
+	$('.menubtn').click(function(){
+		if($(this).hasClass('on'))showMenu(false);
+		else showMenu(true);
+	});
 	$.address.change(addrChange);
 	$(window).load(windowload);
 	function windowload(){
@@ -12,6 +16,16 @@
 	}
 
 	//Event
+	function showMenu(_t){
+		if(_t){
+			$('.menudom').addClass('on');
+			$('.menu').fadeIn();
+		}else{
+			$('.menudom').removeClass('on');
+			$('.menu').fadeOut();
+		}
+		
+	}
 	function addrChange(){
     	var value = $.address.value();
 		switch(value) {
