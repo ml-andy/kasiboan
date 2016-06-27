@@ -16,7 +16,7 @@
 	
 
 	//AddListener
-	$(window).click(function(){
+	$(window).on("touchstart",function(){
 		if(obj.mobile){
   			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
   		}
