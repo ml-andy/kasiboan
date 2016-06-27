@@ -117,13 +117,14 @@
     		else if(event.target.a.id == 'player'){
     			obj.hasWatchvideo = true;
     			$('.player_ctrl').addClass('on');
-    			scroll_btnclick();
+    			obj.nowpage = 4;
+    			checknowpagescroll();
+				$.address.value("/page"+obj.nowpage);
     		}    		
     	}
     	if(obj.player.getPlayerState() ==1){
     		if(!$('.play_btn').hasClass('off')) $('.play_btn').addClass('off').fadeOut(obj.fadespeed);    		
     	}
-    	
     }
 	function scroll_btnclick(){
 		obj.nowpage+=1;
