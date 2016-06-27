@@ -1,4 +1,5 @@
 ﻿$(document).ready(function(){
+	//Init
 	var obj ={
 		wrp: $('.wrapper'),
 		fadespeed: 500,
@@ -8,11 +9,10 @@
 		videoW: $(window).width(),
 		videoH: $(window).height(),
 		warningtxt: '請先欣賞完景點影片，即可往下繼續瀏覽。',
+		videoID_loop:'722u9ZmgVtE',
+		videoID_online:'MaAj77BvA2I',
 		nowpage: 1
-	};	
-
-	//Init
-	// checkmobile();
+	};
 	
 
 	//AddListener
@@ -45,8 +45,8 @@
 	$(window).load(windowload);
 	function windowload(){
 		checkmobile();
-		createVideo('player_loop','722u9ZmgVtE',true);
-		createVideo('player','MaAj77BvA2I',false);		
+		createVideo('player_loop',obj.videoID_loop,true);
+		createVideo('player',obj.videoID_online,false);		
 	}
 
 	//Event
@@ -97,6 +97,7 @@
 		else if(_o == 'player') obj.player = _obj;
     }
     function videoReady(event){
+    	if(event.target.a.id == 'player_loop') obj.player_loop.mute();
     	obj.videohasready+=1;
     	if(obj.videohasready >=2){
     		showMenu(false);
