@@ -223,6 +223,7 @@
 			}
 			&.page3{
 				top: 200%;
+				overflow: hidden;
 				.player_ctrl{
 					@include alt;
 					z-index: 9999;
@@ -253,11 +254,11 @@
 					background-color: rgba(59,59,59,0.8);
 				}
 				#player_loop{
-					@include alt;
+					@include am;
 					z-index: 99;
 				}
 				#player{
-					@include alt;
+					@include am;
 					z-index: 98;	
 				}
 			}
