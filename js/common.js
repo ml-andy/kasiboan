@@ -263,8 +263,8 @@
 		}
 		//video width height
 		if(obj.mobile){
-			obj.videoW="100%";
-		    obj.videoH="100%";
+			obj.videoW = $('.page_box .page3').width();
+		    obj.videoH = $('.page_box .page3').height();
 		}else{
 			var _w = $('.page_box .page3').width() / $('.page_box .page3').height();
 			var _v = 640 / 360;
@@ -275,8 +275,8 @@
 		    	obj.videoH = $('.page_box .page3').height();
 		    	obj.videoW = obj.videoH * _v;
 		    }else if(windowsize==videosize){
-		        obj.videoW="100%";
-		        obj.videoH="100%";
+		        obj.videoW = $('.page_box .page3').width();
+		        obj.videoH = $('.page_box .page3').height();
 		    }			
 		}
 		$('.video').css({'width':obj.videoW,'height':obj.videoH});
