@@ -16,6 +16,11 @@
 	
 
 	//AddListener
+	$('body').click(function(){
+		if(obj.mobile){
+  			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
+  		}
+	});
 	$('.menua').click(function(){menuaClick($(this));});
 	$('.player_ctrl').click(function(){
 		if($(this).hasClass('on')){
@@ -35,7 +40,6 @@
 		else showMenu(true);
 	});
 	$.address.change(addrChange);
-	window.onscroll = windowOnscroll;
 	window.onmousewheel= function(e){onmousewheelfc(e);}
 	$(window).resize(checkmobile);
 	$(window).load(windowload);
@@ -254,12 +258,7 @@
   	function showLoading(_t){
   		if(_t) $('.loading').fadeIn(obj.fadespeed);
   		else $('.loading').fadeOut(obj.fadespeed);
-  	}
-  	function windowOnscroll(){
-  		if(obj.mobile){
-  			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);  			
-  		}
-  	}
+  	}  	
   	function checkmobile(){
   		if(device.mobile()) obj.mobile = true;
 		else{
