@@ -257,7 +257,7 @@
   	}
   	function windowOnscroll(){
   		if(obj.mobile){
-  			if($('.scroll_btn').hasClass('on')) $('.scroll_btn').removeClass('on').fadeOut(obj.fadespeed);  			
+  			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);  			
   		}
   	}
   	function checkmobile(){
