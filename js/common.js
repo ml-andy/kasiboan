@@ -10,13 +10,13 @@
 		videoH: $(window).height(),
 		warningtxt: '請先欣賞完景點影片，即可往下繼續瀏覽。',
 		videoID_loop:'722u9ZmgVtE',
-		videoID_online:'MaAj77BvA2I',
+		videoID_online:'eCiRnxgyLRk',
 		nowpage: 1
 	};
 	
 
 	//AddListener
-	$('body').click(function(){
+	$(window).click(function(){
 		if(obj.mobile){
   			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
   		}
