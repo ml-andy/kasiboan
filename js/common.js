@@ -310,7 +310,7 @@
 		    }else if(_w<_v){
 		    	obj.videoH = $('.page_box .page3').height();
 		    	obj.videoW = obj.videoH * _v;
-		    }else if(windowsize==videosize){
+		    }else if(_w==_v){
 		        obj.videoW = $('.page_box .page3').width();
 		        obj.videoH = $('.page_box .page3').height();
 		    }			
