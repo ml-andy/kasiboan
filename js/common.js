@@ -290,7 +290,7 @@
 				if(obj.player.getPlayerState() ==1) $('.player_ctrl').addClass('on');
 				else $('.player_ctrl').removeClass('on');
 			}catch(err){}			
-			$('html,body').animate({scrollTop:$('.page' + obj.nowpage).offset().top},obj.fadespeed);
+			// $('html,body').animate({scrollTop:$('.page' + obj.nowpage).offset().top},obj.fadespeed);
 		}else{
 			$('.page_box .page1').attr('style','');
 			$('.page_box .page3').attr('style','');
