@@ -2,9 +2,7 @@
 .loading{
 	@include flt;
 	z-index: 99999;
-	background: url(../images/menu_bg.jpg) no-repeat;
-	background-size: cover;
-	background-position: center top;
+	background-color: #241c1a;
 	span{
 		@include am(150px,50px);
 		@include font(21px,50px,#898584);
@@ -56,8 +54,7 @@
 }
 .menu{
 	@include flt;
-	z-index: 998;
-	display: none;
+	z-index: 998;	
 	.menu_box{
 		@include alt(100%,440px,0,50%,0,-220px);
 		z-index: 1;
@@ -389,9 +386,7 @@
 	.loading{
 		@include flt;
 		z-index: 99999;
-		background: url(../images/menu_bg.jpg) no-repeat;
-		background-size: cover;
-		background-position: center top;
+		background-color: #241c1a;
 		span{
 			@include am(150px,50px);
 			@include font(32px,50px,#898584);
@@ -445,8 +440,7 @@
 		@include flt(100%,100%);
 		z-index: 998;		
 		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;		
-		display: none;
+		-webkit-overflow-scrolling: touch;
 		.menu_box{
 			@include r;
 			padding-bottom: 360px;
@@ -813,9 +807,7 @@
 	.loading{
 		@include flt;
 		z-index: 99999;
-		background: url(../images/menu_bg.jpg) no-repeat;
-		background-size: cover;
-		background-position: center top;
+		background-color: #241c1a;
 		span{
 			@include am(150px,50px);
 			@include font(32px,50px,#898584);
@@ -869,8 +861,7 @@
 		@include flt(100%,100%);
 		z-index: 998;		
 		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;		
-		display: none;
+		-webkit-overflow-scrolling: touch;
 		.menu_box{
 			@include r;
 			padding-bottom: 360px;

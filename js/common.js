@@ -94,7 +94,12 @@
     }
     function videoReady(event){
     	obj.videohasready+=1;
-    	if(obj.videohasready >=2) showLoading(false);
+    	if(obj.videohasready >=2){
+    		showMenu(false);
+    		setTimeout(function(){
+    			showLoading(false);
+    		},obj.fadespeed);    		
+    	}
     }
     function onPlayerStateChange(event){
     	if(obj.mobile){
