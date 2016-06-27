@@ -665,11 +665,13 @@
 					}
 					#player_loop{
 						@include alt;
+						@include transform(translate(0,0));
 						z-index: 99;
 						display: none;
 					}
 					#player{
 						@include alt;
+						@include transform(translate(0,0));
 						overflow: hidden;
 						z-index: 98;	
 					}
@@ -1082,11 +1084,13 @@
 					}
 					#player_loop{
 						@include alt;
+						@include transform(translate(0,0));
 						z-index: 99;
 						display: none;
 					}
 					#player{
 						@include alt;
+						@include transform(translate(0,0));
 						overflow: hidden;
 						z-index: 98;	
 					}
