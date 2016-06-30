@@ -51,6 +51,9 @@
 		else showMenu(true);
 	});
 	$.address.change(addrChange);
+	$(window).on('touchstart',function(){
+		console.log('touchstart');
+	});
 	window.onmousewheel= function(e){onmousewheelfc(e);}
 	$(window).resize(checkmobile);
 	$(window).load(windowload);
@@ -228,7 +231,7 @@
 				obj.canwheel = false;
 				console.log('bbb');
 				clearTimeout(obj.canwheeltimeout);
-				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},1000);
+				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},2000);
 				if(e.wheelDelta>0) obj.nowpage-=1;
 				else obj.nowpage+=1;
 				checknowpagescroll();
