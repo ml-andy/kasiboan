@@ -225,7 +225,8 @@
     		e.preventDefault();
 			if(obj.canwheel){
 				obj.canwheel = false;
-				setTimeout(function(){obj.canwheel=true;},obj.fadespeed);
+				clearTimeout(obj.canwheeltimeout);
+				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},obj.fadespeed);
 				if(e.wheelDelta>0) obj.nowpage-=1;
 				else obj.nowpage+=1;
 				checknowpagescroll();
