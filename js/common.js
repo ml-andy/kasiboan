@@ -223,8 +223,10 @@
     	if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
     	if(!obj.mobile){
     		e.preventDefault();
+    		console.log('aaa');
 			if(obj.canwheel){
 				obj.canwheel = false;
+				console.log('bbb');
 				clearTimeout(obj.canwheeltimeout);
 				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},obj.fadespeed);
 				if(e.wheelDelta>0) obj.nowpage-=1;
@@ -232,6 +234,8 @@
 				checknowpagescroll();
 				$.address.value("/page"+obj.nowpage);
 			}
+    	}else{
+    		console.log('cccc');
     	}
 	}
 	function checknowpagescroll(){
