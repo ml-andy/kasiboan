@@ -28,6 +28,7 @@
 
 	//AddListener
 	$(window).on("touchstart",function(){
+		console.log('touchstart');
 		if(obj.mobile){
   			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
   		}
@@ -51,9 +52,6 @@
 		else showMenu(true);
 	});
 	$.address.change(addrChange);
-	$(window).on('touchstart',function(){
-		console.log('touchstart');
-	});
 	window.onmousewheel= function(e){onmousewheelfc(e);}
 	$(window).resize(checkmobile);
 	$(window).load(windowload);
