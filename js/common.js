@@ -28,7 +28,6 @@
 
 	//AddListener
 	$(window).on("touchstart",function(){
-		console.log('touchstart');
 		if(obj.mobile){
   			if(!$('.scroll_btn').hasClass('inMb')) $('.scroll_btn').addClass('inMb').fadeOut(obj.fadespeed);
   		}
@@ -229,7 +228,7 @@
 				obj.canwheel = false;
 				console.log('bbb');
 				clearTimeout(obj.canwheeltimeout);
-				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},2000);
+				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},1500);
 				if(e.wheelDelta>0) obj.nowpage-=1;
 				else obj.nowpage+=1;
 				checknowpagescroll();

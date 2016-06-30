@@ -129,8 +129,8 @@
 	min-width: 1200px;
 	.page_box{
 		@include alt;
-		transition:1s;
-		@include transition-timing-function(ease-in-out);
+		transition:0.5s;
+		// @include transition-timing-function(ease-in-out);
 		&.pg1{@include transform(translate(0,0));}
 		&.pg2{@include transform(translate(0,-100%));}
 		&.pg3{@include transform(translate(0,-200%));}
