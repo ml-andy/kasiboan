@@ -226,7 +226,7 @@
 			if(obj.canwheel){
 				obj.canwheel = false;
 				clearTimeout(obj.canwheeltimeout);
-				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},1300);
+				obj.canwheeltimeout = setTimeout(function(){obj.canwheel=true;},1500);
 				if(e.wheelDelta>0) obj.nowpage-=1;
 				else obj.nowpage+=1;
 				checknowpagescroll();
