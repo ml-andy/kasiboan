@@ -16,6 +16,7 @@
 	cursor: pointer;
 	z-index: 999;
 	transition: 0.35s;
+	display: none;
 	&:hover{
 		span{opacity: 0.8;}		
 	}
@@ -104,6 +105,23 @@
 	cursor: pointer;
 	z-index: 997;
 	transition:0.5s;
+	&:before{
+		content:"";
+		@include alb(20px,13px,50%,13px,-10px);
+		@include animation-duration(1.5s);
+	    @include animation-iteration-count(infinite);
+	    @include animation-timing-function(ease-out);					    
+	    @include animation-name(scroll_btnani);
+	    z-index: 1;
+	    background: url(../images/pg1_scroll_icon.png) no-repeat;
+	    background-size: contain;
+	}
+	@include keyframes(scroll_btnani){
+	    0%  {bottom: 13px;}
+	    40%  {bottom: 0px;}
+	    60%  {bottom: 0px;}
+	    100%  {bottom: 13px;}
+	} 
 }
 .wrapper{
 	@include alt;
@@ -517,6 +535,7 @@
 			&.pg7{@include transform(translate(0,0));margin-top: 0px;}
 			.page{
 				@include r;
+				&.pgm{display: none;}
 				&.page1{
 					@include r;
 					.title{
