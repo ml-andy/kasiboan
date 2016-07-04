@@ -30,7 +30,7 @@ gulp.task('js',function(){
 });
 gulp.task('connect', function() {
   $.connect.server({
-  	root: 'D:/yihsien/case/20160626_kasiboan/kasiboan/andy/',
+  	root: 'andy/',
   	livereload: true
   });
 });
